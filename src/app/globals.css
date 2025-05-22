@@ -132,6 +132,79 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+/* === Custom color utilities === */
+
+/* Text Colors */
+.text-primary {
+  color: var(--primary);
+}
+.text-foreground {
+  color: var(--foreground);
+}
+.text-muted {
+  color: var(--muted-foreground);
+}
+.text-accent {
+  color: var(--accent);
+}
+.text-accent-foreground {
+  color: var(--accent-foreground);
+}
+.text-secondary {
+  color: var(--secondary);
+}
+.text-secondary-foreground {
+  color: var(--secondary-foreground);
+}
+.text-destructive {
+  color: var(--destructive);
+}
+
+/* Background Colors */
+.bg-background {
+  background-color: var(--background);
+}
+.bg-card {
+  background-color: var(--card);
+}
+.bg-popover {
+  background-color: var(--popover);
+}
+.bg-muted {
+  background-color: var(--muted);
+}
+.bg-accent {
+  background-color: var(--accent);
+}
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+/* Border / Ring */
+.border-default {
+  border-color: var(--border);
+}
+.border-input {
+  border-color: var(--input);
+}
+.ring-default {
+  --tw-ring-color: var(--ring);
+}
+
+/* Sidebar */
+.bg-sidebar {
+  background-color: var(--sidebar);
+}
+.text-sidebar {
+  color: var(--sidebar-foreground);
+}
+.text-sidebar-primary {
+  color: var(--sidebar-primary);
+}
+.text-sidebar-accent {
+  color: var(--sidebar-accent);
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

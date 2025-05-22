@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import Navbar from "@/components/common/Navbar";
+import Footer from "@/components/common/Footer";
 
 const dmSans = DM_Sans({
-  variable: "--font-dmSans",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  variable: "--font-dmSans",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +27,11 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cn(dmSans.variable, "font-sans")}
     >
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        <Navbar />
+        <main className="min-h-screen pt-16">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
