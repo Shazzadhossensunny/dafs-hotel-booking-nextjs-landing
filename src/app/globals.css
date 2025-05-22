@@ -138,6 +138,9 @@
 .text-primary {
   color: var(--primary);
 }
+.text-heading {
+  color: var(--heading);
+}
 .text-foreground {
   color: var(--foreground);
 }
