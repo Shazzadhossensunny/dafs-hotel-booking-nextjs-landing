@@ -2,6 +2,7 @@ import HotelAvailability from "@/components/hotel/Hotel-avaiability";
 import HotelFeatures from "@/components/hotel/Hotel-features";
 import HotelGallery from "@/components/hotel/Hotel-gallery";
 import HotelHeader from "@/components/hotel/Hotel-header";
+import HotelReviews from "@/components/hotel/Reviews";
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
 
@@ -65,22 +66,9 @@ export default function HotelHomePage({ params }: any) {
           </div>
 
           {/* Booking Card */}
-          <div>
-            <div className="sticky top-24 bg-white rounded-xl shadow-lg p-6 transition-all">
-              {/* <BookCard /> */}
-              <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-2xl font-bold text-dayf-primary">
-                    ${hotelData.price}
-                  </span>
-                  <span className="text-dayf-text">per night</span>
-                </div>
-                <Button className="w-full bg-dayf-primary hover:bg-dayf-highlight">
-                  Reserve Now
-                </Button>
-              </div>
-            </div>
-          </div>
+
+          {/* review */}
+          <HotelReviews />
         </div>
       </div>
     </div>

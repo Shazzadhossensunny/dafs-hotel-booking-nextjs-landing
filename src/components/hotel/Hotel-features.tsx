@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
+import BookCard from "./Book-card";
 
 type Feature = {
   icon: string;
@@ -137,13 +138,14 @@ const HotelFeatures = ({ hotel }: Props) => {
 
         {/* Right: Booking Info Box */}
         <div className="w-full lg:w-1/3">
-          <div className="border border-[#A3D0EE] rounded-lg p-6 shadow-sm space-y-4">
+          {/* <div className="border border-[#A3D0EE] rounded-lg p-6 shadow-sm space-y-4">
             <p className="text-sm text-gray-600">1 week, 2 adults, 1 child</p>
             <p className="text-2xl font-semibold text-black">USD $6,112</p>
             <Button className="w-full bg-primary rounded-full text-white hover:bg-foreground">
               Reserve
             </Button>
-          </div>
+          </div> */}
+          <BookCard hotel={hotel} />
         </div>
       </div>
     </div>
