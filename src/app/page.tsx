@@ -1,6 +1,8 @@
+import HotelFeatures from "@/components/hotel/Hotel-features";
 import HotelGallery from "@/components/hotel/Hotel-gallery";
 import HotelHeader from "@/components/hotel/Hotel-header";
 import { Button } from "@/components/ui/button";
+import { MessageCircle } from "lucide-react";
 
 export default function HotelHomePage({ params }: any) {
   const hotelData = {
@@ -52,26 +54,10 @@ export default function HotelHomePage({ params }: any) {
               <HotelGallery images={hotelData.images} />
             </div>
 
-            {/* Hotel Tabs */}
-            <div className="border-b border-gray-200">
-              <nav className="flex space-x-8">
-                <button className="pb-4 px-1 border-b-2 border-primary text-primary font-medium">
-                  Overview
-                </button>
-                <button className="pb-4 px-1 text-foreground hover:text-primary transition-colors">
-                  Features
-                </button>
-                <button className="pb-4 px-1 text-foreground hover:text-primary transition-colors">
-                  Reviews
-                </button>
-                <button className="pb-4 px-1 text-primary hover:bg-primary/10 rounded-lg transition-colors">
-                  Message
-                </button>
-              </nav>
-            </div>
-
             <div className="space-y-8">
-              {/* <HotelFeatures /> */}
+              {/* features */}
+              <HotelFeatures hotel={hotelData} />
+
               {/* <HotelAvailability /> */}
             </div>
           </div>
