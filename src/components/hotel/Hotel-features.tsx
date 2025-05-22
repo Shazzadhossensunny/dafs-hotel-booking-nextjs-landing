@@ -91,32 +91,32 @@ const HotelFeatures = ({ hotel }: Props) => {
           {activeTab === "overview" && (
             <>
               <div>
-                <h2 className="text-xl font-semibold text-dayf-heading mb-2">
+                <h2 className="text-xl font-semibold text-heading mb-2">
                   Property Type
                 </h2>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex items-center">
-                    <span className="inline-block w-2 h-2 bg-dayf-primary rounded-full mr-2"></span>
-                    <span className="text-dayf-text">{hotel?.type}</span>
+                    <span className="inline-block w-2 h-2 bg-primary rounded-full mr-2"></span>
+                    <span className="text-foreground">{hotel?.type}</span>
                   </div>
                   <div className="flex items-center">
-                    <span className="inline-block w-2 h-2 bg-dayf-primary rounded-full mr-2"></span>
-                    <span className="text-dayf-text">{hotel?.size}</span>
+                    <span className="inline-block w-2 h-2 bg-primary rounded-full mr-2"></span>
+                    <span className="text-foreground">{hotel?.size}</span>
                   </div>
                 </div>
               </div>
 
               <div>
-                <h2 className="text-xl font-semibold text-dayf-heading mb-4">
+                <h2 className="text-xl font-semibold text-heading mb-4">
                   Features
                 </h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {hotel?.features.map((feature, index) => (
                     <div key={index} className="flex items-center">
-                      <div className="mr-2 text-dayf-text">
+                      <div className="mr-2 text-foreground">
                         {getIcon(feature.icon)}
                       </div>
-                      <span className="text-dayf-text">{feature.name}</span>
+                      <span className="text-foreground">{feature.name}</span>
                     </div>
                   ))}
                 </div>
@@ -125,11 +125,13 @@ const HotelFeatures = ({ hotel }: Props) => {
           )}
 
           {activeTab === "features" && (
-            <div className="text-dayf-text">Extra features content here...</div>
+            <div className="text-foreground">
+              Extra features content here...
+            </div>
           )}
 
           {activeTab === "reviews" && (
-            <div className="text-dayf-text">Reviews content here...</div>
+            <div className="text-foreground">Reviews content here...</div>
           )}
         </div>
 

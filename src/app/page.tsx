@@ -1,3 +1,4 @@
+import HotelAvailability from "@/components/hotel/Hotel-avaiability";
 import HotelFeatures from "@/components/hotel/Hotel-features";
 import HotelGallery from "@/components/hotel/Hotel-gallery";
 import HotelHeader from "@/components/hotel/Hotel-header";
@@ -58,7 +59,8 @@ export default function HotelHomePage({ params }: any) {
               {/* features */}
               <HotelFeatures hotel={hotelData} />
 
-              {/* <HotelAvailability /> */}
+              {/* hotel availability*/}
+              <HotelAvailability />
             </div>
           </div>
 
