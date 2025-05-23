@@ -1,7 +1,11 @@
+import AboutProperty from "@/components/hotel/About-property";
+import HotelBookingPage from "@/components/hotel/Booking";
 import HotelAvailability from "@/components/hotel/Hotel-avaiability";
 import HotelFeatures from "@/components/hotel/Hotel-features";
 import HotelGallery from "@/components/hotel/Hotel-gallery";
 import HotelHeader from "@/components/hotel/Hotel-header";
+import HotelRecommendationsCarousel from "@/components/hotel/HotelRecommendations";
+import PoliciesSection from "@/components/hotel/Policy";
 import HotelReviews from "@/components/hotel/Reviews";
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
@@ -61,7 +65,10 @@ export default function HotelHomePage({ params }: any) {
               <HotelFeatures hotel={hotelData} />
 
               {/* hotel availability*/}
-              <HotelAvailability />
+              {/* <HotelAvailability /> */}
+              <HotelBookingPage />
+              <AboutProperty />
+              <PoliciesSection />
             </div>
           </div>
 
@@ -69,6 +76,8 @@ export default function HotelHomePage({ params }: any) {
 
           {/* review */}
           <HotelReviews />
+          {/* recomdation hotel */}
+          <HotelRecommendationsCarousel />
         </div>
       </div>
     </div>

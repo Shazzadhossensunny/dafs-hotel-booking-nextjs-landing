@@ -8,7 +8,7 @@ import Footer from "@/components/common/Footer";
 const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-dmSans",
+  variable: "--font-dm-sans",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +25,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn(dmSans.variable, "font-sans")}
+      className={cn(dmSans.variable, "font-dm-sans")}
     >
       <body className="font-sans antialiased">
         <Navbar />

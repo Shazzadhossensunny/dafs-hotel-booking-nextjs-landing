@@ -77,7 +77,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Hotels", href: "/hotels" },
-    { name: "House", href: "/house" },
+    { name: "House", href: "#" },
     { name: "About Us", href: "/about" },
     { name: "Contact Us", href: "/contact" },
   ];

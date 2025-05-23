@@ -29,6 +29,7 @@ const nextConfig: NextConfig = {
     // Similar to ESLint, this ignores TypeScript errors during build
     ignoreBuildErrors: true,
   },
+  transpilePackages: ["leaflet"],
 };
 
 export default nextConfig;
