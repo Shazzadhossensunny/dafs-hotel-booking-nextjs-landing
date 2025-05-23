@@ -297,18 +297,18 @@ const HotelBookingApp = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className=" bg-gray-50">
       {/* Search Section */}
-      <div className="bg-white shadow-sm">
+      <div className="bg-white">
         <div className="max-w-7xl mx-auto px-4 py-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">
-            Check Availability
+          <h2 className="text-xl font-semibold text-black mb-4">
+            Availability
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4 border border-blue-200 rounded-xl bg-white">
             {/* Check-in */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 Check-In
               </label>
               <Popover>
@@ -345,7 +345,7 @@ const HotelBookingApp = () => {
 
             {/* Check-out */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 Check-Out
               </label>
               <Popover>
@@ -358,7 +358,7 @@ const HotelBookingApp = () => {
                     )}
                     onClick={() => setOpenCheckOut(!openCheckOut)}
                   >
-                    <CalendarIcon className="mr-2 h-5 w-5 text-blue-500" />
+                    <CalendarIcon className="mr-2 h-5 w-5 text-primary" />
                     {checkOutDate
                       ? format(checkOutDate, "EEE, dd MMM yyyy")
                       : "Pick a date"}
@@ -382,7 +382,7 @@ const HotelBookingApp = () => {
 
             {/* Guests */}
             <div className="relative">
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 Room & Guest
               </label>
               <Button
@@ -480,7 +480,7 @@ const HotelBookingApp = () => {
                 &nbsp;
               </label>
               <Button
-                className="bg-blue-500 hover:bg-blue-600 text-white w-full h-11"
+                className="bg-[#007DD0] hover:bg-primary text-white w-full h-11 !rounded-4xl"
                 onClick={handleSearch}
                 disabled={!checkInDate || !checkOutDate || isSearching}
               >
@@ -500,12 +500,12 @@ const HotelBookingApp = () => {
 
       {/* Results Section */}
       {showResults && (
-        <div className="max-w-7xl mx-auto px-4 py-8">
+        <div className="container mx-auto">
           {/* Room Selection Table */}
           <div className="bg-white rounded-lg shadow-sm overflow-hidden mb-8">
             <div className="overflow-x-auto">
               {/* Header */}
-              <div className="bg-blue-500 text-white">
+              <div className="bg-[#007DD0] text-white">
                 <div className="grid grid-cols-1 lg:grid-cols-6 gap-4 p-4 text-sm font-medium">
                   <div className="lg:col-span-1">Room type</div>
                   <div className="text-center">Number of guests</div>
@@ -604,10 +604,10 @@ const HotelBookingApp = () => {
                   </div>
 
                   {/* Reserve Button */}
-                  <div className="flex justify-center">
-                    <button className="bg-blue-500 text-white px-6 py-2 rounded font-medium hover:bg-blue-600 transition-colors">
+                  <div className="flex justify-center items-start ">
+                    <Button className="bg-[#007DD0] w-full text-white px-2 py-2 !rounded-4xl font-medium hover:bg-blue-600 transition-colors ">
                       Reserve
-                    </button>
+                    </Button>
                   </div>
                 </div>
               ))}

@@ -20,7 +20,7 @@ const BookCard = ({ hotel }: any) => {
           </div>
         </div>
 
-        <Button className="w-full bg-primary rounded-full text-white hover:bg-foreground cursor-pointer">
+        <Button className="w-full bg-[#007DD0] rounded-full text-white hover:bg-foreground cursor-pointer">
           Reserve
         </Button>
       </div>

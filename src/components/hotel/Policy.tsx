@@ -107,11 +107,11 @@ const PoliciesSection = () => {
 
   return (
     <div className="w-full container mx-auto p-4 sm:p-6">
-      <Card className="border border-gray-200 rounded-lg shadow-sm">
+      <Card className="border bg-white border-gray-200 rounded-lg shadow-sm">
         <CardContent className="p-0">
           {/* Header */}
-          <div className="bg-gray-50 px-4 sm:px-6 py-4 border-b border-gray-200">
-            <h2 className="text-lg font-semibold text-gray-900">Policies</h2>
+          <div className=" px-4 sm:px-6 py-4 border-b border-gray-200">
+            <h2 className="text-lg font-semibold text-black">Policies</h2>
           </div>
 
           {/* Policies List */}
@@ -121,7 +121,7 @@ const PoliciesSection = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                   {/* Policy Title */}
                   <div className="lg:col-span-1">
-                    <h3 className="text-sm font-medium text-gray-900 leading-relaxed">
+                    <h3 className="font-medium text-gray-900 text-2xl leading-relaxed">
                       {policy.title}
                     </h3>
                   </div>

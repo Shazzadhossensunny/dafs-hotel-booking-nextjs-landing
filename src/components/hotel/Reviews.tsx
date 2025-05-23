@@ -71,7 +71,7 @@ const HotelReviewSlider = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()]);
 
   return (
-    <section className="mt-10">
+    <section className="mt-10 px-6">
       {/* Header and Navigation */}
       <div className="mb-4">
         <h2 className="text-xl md:text-2xl font-semibold text-heading">

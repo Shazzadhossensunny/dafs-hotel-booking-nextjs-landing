@@ -31,7 +31,7 @@ const HotelHeader = ({ hotel }: any) => {
           </button>
           <Link
             href="#"
-            className="flex justify-center items-center gap-1 bg-primary px-6.5 py-2.5 rounded-full text-white text-xl font-semibold hover:bg-foreground transition-colors"
+            className="flex justify-center items-center gap-1 bg-[#007DD0] px-6.5 py-2.5 rounded-full text-white text-xl font-semibold hover:bg-foreground transition-colors"
           >
             Reserve
             <ArrowRight className="h-5 w-5 text-white" />

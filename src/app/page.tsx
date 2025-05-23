@@ -1,6 +1,5 @@
 import AboutProperty from "@/components/hotel/About-property";
 import HotelBookingPage from "@/components/hotel/Booking";
-import HotelAvailability from "@/components/hotel/Hotel-avaiability";
 import HotelFeatures from "@/components/hotel/Hotel-features";
 import HotelGallery from "@/components/hotel/Hotel-gallery";
 import HotelHeader from "@/components/hotel/Hotel-header";
@@ -65,19 +64,17 @@ export default function HotelHomePage({ params }: any) {
               <HotelFeatures hotel={hotelData} />
 
               {/* hotel availability*/}
-              {/* <HotelAvailability /> */}
               <HotelBookingPage />
               <AboutProperty />
+              {/* Booking Card */}
+
+              {/* review */}
+              <HotelReviews />
               <PoliciesSection />
+              {/* recomdation hotel */}
+              <HotelRecommendationsCarousel />
             </div>
           </div>
-
-          {/* Booking Card */}
-
-          {/* review */}
-          <HotelReviews />
-          {/* recomdation hotel */}
-          <HotelRecommendationsCarousel />
         </div>
       </div>
     </div>

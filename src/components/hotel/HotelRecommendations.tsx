@@ -310,7 +310,7 @@ const HotelRecommendationsCarousel = () => {
 
           {/* Action Buttons */}
           <div className="flex gap-3">
-            <button className="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:scale-[1.02]">
+            <button className="flex-1 bg-[#007DD0] hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 px-4 rounded-full transition-all duration-200 shadow-md hover:shadow-lg transform hover:scale-[1.02]">
               Book Now
             </button>
             <button className="p-3 border-2 border-gray-200 hover:border-blue-300 hover:bg-blue-50 rounded-lg transition-all duration-200 group">

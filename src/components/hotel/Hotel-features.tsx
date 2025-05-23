@@ -8,6 +8,7 @@ import {
   Snowflake,
   Dumbbell,
   Lock,
+  House,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
@@ -77,7 +78,7 @@ const HotelFeatures = ({ hotel }: Props) => {
           Reviews
         </button>
 
-        <Button className="relative rounded-full flex justify-center items-center gap-1 bg-primary px-3 py-1 hover:bg-foreground transition-colors duration-300 cursor-pointer">
+        <Button className="relative rounded-full flex justify-center items-center gap-1 bg-[#007DD0] px-3 py-1 hover:bg-foreground transition-colors duration-300 cursor-pointer">
           <div className="relative">
             <MessageCircle className="h-6 w-6 text-white" />
             <div className="absolute top-0 right-0 w-2 h-2 rounded-full bg-white border border-white"></div>
@@ -97,11 +98,12 @@ const HotelFeatures = ({ hotel }: Props) => {
                 </h2>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex items-center">
-                    <span className="inline-block w-2 h-2 bg-primary rounded-full mr-2"></span>
+                    <House className="w-3 h-3 text-foreground mr-2" />
+
                     <span className="text-foreground">{hotel?.type}</span>
                   </div>
                   <div className="flex items-center">
-                    <span className="inline-block w-2 h-2 bg-primary rounded-full mr-2"></span>
+                    <House className="w-3 h-3 text-foreground mr-2" />
                     <span className="text-foreground">{hotel?.size}</span>
                   </div>
                 </div>

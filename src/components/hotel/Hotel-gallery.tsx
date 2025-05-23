@@ -45,7 +45,7 @@ export default function HotelGallery({ images }: HotelGalleryProps) {
         </div>
 
         {/* Thumbnail Row (6 images) */}
-        <div className="col-span-3 row-span-1 flex gap-2 p-2 bg-gray-100">
+        <div className="col-span-3 row-span-1 flex gap-2">
           {images.slice(3, 9).map((src, index) => (
             <div
               key={index}
@@ -64,7 +64,7 @@ export default function HotelGallery({ images }: HotelGalleryProps) {
       </div>
 
       {/* Navigation Controls */}
-      <div className="flex justify-between items-center px-4">
+      {/* <div className="flex justify-between items-center px-4">
         <div className="text-dayf-primary font-medium">
           {currentIndex + 1} / {images.length}
         </div>
@@ -75,7 +75,7 @@ export default function HotelGallery({ images }: HotelGalleryProps) {
         >
           <ChevronRight className="w-6 h-6 text-gray-700" />
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }

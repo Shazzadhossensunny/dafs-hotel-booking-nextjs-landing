@@ -104,7 +104,7 @@ const MapComponent = dynamic(
           zoom={13}
           scrollWheelZoom={false}
           style={{ height: "100%", width: "100%" }}
-          className="rounded-lg"
+          className="rounded-lg w-full h-full"
         >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -172,7 +172,7 @@ export default function AboutProperty() {
               {/* Restaurants & Cafes */}
               <div className="space-y-3">
                 <div className="flex items-center gap-2 mb-3">
-                  <Utensils className="w-5 h-5 text-orange-500" />
+                  <Utensils className="w-5 h-5 text-foreground" />
                   <h3 className="font-semibold text-gray-900">
                     Restaurants & cafes
                   </h3>
@@ -195,7 +195,7 @@ export default function AboutProperty() {
               {/* Shops & Markets */}
               <div className="space-y-3">
                 <div className="flex items-center gap-2 mb-3">
-                  <ShoppingBag className="w-5 h-5 text-green-500" />
+                  <ShoppingBag className="w-5 h-5 text-foreground" />
                   <h3 className="font-semibold text-gray-900">
                     Shops & Markets
                   </h3>
@@ -218,7 +218,7 @@ export default function AboutProperty() {
               {/* Beaches */}
               <div className="space-y-3">
                 <div className="flex items-center gap-2 mb-3">
-                  <Waves className="w-5 h-5 text-blue-500" />
+                  <Waves className="w-5 h-5 text-foreground" />
                   <h3 className="font-semibold text-gray-900">Beaches</h3>
                 </div>
                 <div className="space-y-2">
@@ -239,7 +239,7 @@ export default function AboutProperty() {
               {/* Public Transport */}
               <div className="space-y-3">
                 <div className="flex items-center gap-2 mb-3">
-                  <Train className="w-5 h-5 text-blue-500" />
+                  <Train className="w-5 h-5 text-foreground" />
                   <h3 className="font-semibold text-gray-900">
                     Public transport
                   </h3>
@@ -264,8 +264,8 @@ export default function AboutProperty() {
 
         {/* Right Column - Map */}
         <div className="lg:col-span-1">
-          <div className="bg-white rounded-lg p-4 shadow-sm border h-full">
-            <div className="relative h-full max-h-[580px] rounded-lg overflow-hidden">
+          <div className="bg-white rounded-lg p-4 shadow-sm border h-full w-full">
+            <div className="relative  w-full max-h-[580px] rounded-lg overflow-hidden">
               {isMounted && <MapComponent />}
 
               {/* Explore the Area Button */}

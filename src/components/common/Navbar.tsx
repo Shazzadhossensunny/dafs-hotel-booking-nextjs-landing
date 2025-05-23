@@ -85,7 +85,7 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 bg-[#E9F6FF] shadow-sm z-50">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <div className="relative w-32 h-8">
@@ -106,7 +106,7 @@ const Navbar = () => {
                 href={link.href}
                 className={`${
                   pathname === link.href
-                    ? "text-primary font-medium"
+                    ? "text-primary font-bold"
                     : "text-foreground hover:text-primary"
                 } transition-colors duration-300`}
               >
@@ -204,7 +204,7 @@ const Navbar = () => {
             {/* User */}
             <Link
               href="#"
-              className="hidden md:flex items-center bg-[#FFFFFF80] p-3 rounded-full text-primary hover:text-primary transition-colors duration-300"
+              className="hidden md:flex items-center bg-[#FFFFFF80]  p-3 rounded-full text-primary hover:text-primary transition-colors duration-300"
             >
               <User className="h-5 w-5" />
               <span className="ml-1">Sunan</span>
