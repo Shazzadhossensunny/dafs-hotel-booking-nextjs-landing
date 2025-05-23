@@ -32,9 +32,8 @@ interface Country {
 const Navbar = () => {
   const pathname = usePathname();
   const [country, setCountry] = useState<string>("ES");
-  const [currency, setCurrency] = useState<string>("EUR");
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [countries, setCountries] = useState<Country[]>([]);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const fetchCountries = async () => {
@@ -64,16 +63,21 @@ const Navbar = () => {
 
   const handleCountryChange = (value: string) => {
     setCountry(value);
-    const selectedCountry = countries.find((c) => c.code === value);
-    if (selectedCountry) {
-      setCurrency(selectedCountry.currency);
+  };
+
+  const handleCurrencyChange = (selectedCurrency: string) => {
+    const matchedCountry = countries.find(
+      (c) => c.currency === selectedCurrency
+    );
+    if (matchedCountry) {
+      setCountry(matchedCountry.code);
     }
   };
 
-  const currentCountry = countries.find((c) => c.code === country);
-  const currentCurrency = countries.find((c) => c.currency === currency);
+  const selectedCountry = countries.find((c) => c.code === country);
+  const currentCurrency = selectedCountry?.currency ?? "USD";
+  const currentCurrencySymbol = selectedCountry?.symbol ?? "$";
 
-  // Navigation links
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Hotels", href: "/hotels" },
@@ -118,11 +122,13 @@ const Navbar = () => {
           {/* Right Controls */}
           <div className="flex items-center space-x-4">
             {/* Currency Selector */}
-            <Select value={currency} onValueChange={setCurrency}>
-              <SelectTrigger className=" border-[#A5D3F1] rounded-full focus:ring-0 bg-transparent">
-                <div className="flex items-center gap-2 border-[#535353] border-1 w-5 h-5 rounded-full justify-center">
-                  <span className="">{currentCurrency?.symbol}</span>
-                  {/* <ChevronDown className="h-4 w-4 opacity-50 ml-auto" /> */}
+            <Select
+              value={currentCurrency}
+              onValueChange={handleCurrencyChange}
+            >
+              <SelectTrigger className="border-[#A5D3F1] rounded-full focus:ring-0 bg-transparent">
+                <div className="flex items-center gap-2">
+                  <span>{currentCurrencySymbol}</span>
                 </div>
               </SelectTrigger>
               <SelectContent>
@@ -141,22 +147,22 @@ const Navbar = () => {
                 )}
               </SelectContent>
             </Select>
-            {/* flag Selector */}
+
+            {/* Flag Selector */}
             <Select value={country} onValueChange={handleCountryChange}>
-              <SelectTrigger className="border-[#A5D3F1] rounded-full  focus:ring-0 bg-transparent">
+              <SelectTrigger className="border-[#A5D3F1] rounded-full focus:ring-0 bg-transparent">
                 <div className="flex items-center gap-2">
                   <div className="w-5 h-5 rounded-full overflow-hidden">
-                    {currentCountry?.flag && (
+                    {selectedCountry?.flag && (
                       <Image
-                        src={currentCountry.flag}
+                        src={selectedCountry.flag}
                         width={20}
                         height={20}
-                        alt={`${currentCountry.name} flag`}
+                        alt={`${selectedCountry.name} flag`}
                         className="object-cover w-full h-full"
                       />
                     )}
                   </div>
-                  {/* <ChevronDown className="h-4 w-4 opacity-50 ml-auto" /> */}
                 </div>
               </SelectTrigger>
               <SelectContent>
@@ -180,7 +186,6 @@ const Navbar = () => {
             </Select>
 
             {/* List Property */}
-
             <Link
               href="#"
               className="hidden border-[#A5D3F1] border-1 rounded-full md:flex items-center gap-2 text-primary hover:text-accent transition-colors duration-300 px-3 py-2"
@@ -188,13 +193,11 @@ const Navbar = () => {
               <span>List your property</span>
               <MoveUpRight className="h-4 w-4 mr-1" />
             </Link>
-            {/* message */}
 
+            {/* Message Icon */}
             <div className="relative rounded-full bg-[#FFFFFF80] p-3 hover:text-accent transition-colors duration-300">
-              {/* Message icon */}
               <div className="relative">
                 <MessageCircle className="h-6 w-6 text-primary" />
-                {/* Status dot */}
                 <div className="absolute top-0 right-0">
                   <div className="w-2 h-2 rounded-full bg-[#FFAC47] border border-white"></div>
                 </div>
@@ -204,13 +207,13 @@ const Navbar = () => {
             {/* User */}
             <Link
               href="#"
-              className="hidden md:flex items-center bg-[#FFFFFF80]  p-3 rounded-full text-primary hover:text-primary transition-colors duration-300"
+              className="hidden md:flex items-center bg-[#FFFFFF80] p-3 rounded-full text-primary hover:text-primary transition-colors duration-300"
             >
               <User className="h-5 w-5" />
               <span className="ml-1">Sunan</span>
             </Link>
 
-            {/* Mobile menu button */}
+            {/* Mobile Menu Button */}
             <button
               className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-primary hover:bg-muted focus:outline-none"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
